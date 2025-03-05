@@ -6,11 +6,10 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import { promises as fs } from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { promises as fs } from 'node:fs';
+import path, { isAbsolute } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import minimist from 'minimist';
-import { isAbsolute } from 'path';
 
 // Parse args and handle paths safely
 const argv = minimist(process.argv.slice(2));
